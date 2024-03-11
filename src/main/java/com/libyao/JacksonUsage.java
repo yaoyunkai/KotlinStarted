@@ -13,7 +13,7 @@ public class JacksonUsage {
         Class cls = new Class();
 
         cls.level = 7;
-        cls.name = "七年级";
+        cls.name = "Grade 7";
 
         student.age = 18;
         student.name = "Tom";
