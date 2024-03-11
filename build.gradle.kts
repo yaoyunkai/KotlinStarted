@@ -10,8 +10,9 @@ repositories {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
     implementation("com.fasterxml.jackson.core:jackson-databind:2.16.2")
+    implementation("redis.clients:jedis:5.1.0")
+    implementation("org.slf4j:slf4j-nop:2.0.7")
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 }
