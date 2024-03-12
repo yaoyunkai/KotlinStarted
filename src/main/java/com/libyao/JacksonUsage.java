@@ -13,10 +13,10 @@ public class JacksonUsage {
         Class cls = new Class();
 
         cls.level = 7;
-        cls.name = "Grade 7";
+        cls.name = "七年级";
 
         student.age = 18;
-        student.name = "Tom";
+        student.name = "小明";
         student.gender = 1;
         student.cls = cls;
 
@@ -24,11 +24,20 @@ public class JacksonUsage {
 
         ObjectMapper mapper = new ObjectMapper();
 
+        // try {
+        //     BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("stu.json"), StandardCharsets.UTF_8));
+        //     mapper.writeValue(writer, student);
+        // } catch (IOException e) {
+        //     throw new RuntimeException(e);
+        // }
+
+        Student stu2;
         try {
-            mapper.writeValue(new File("stu.json"), student);
+            stu2 = mapper.readValue(new File("stu.json"), Student.class);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        System.out.println(stu2);
 
     }
 }

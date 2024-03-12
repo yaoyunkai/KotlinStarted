@@ -1,1 +1,9 @@
-{"age":18,"name":"Tom","gender":1,"cls":{"level":7,"name":"Grade 7"}}
+{
+  "age": 18,
+  "name": "小明",
+  "gender": 1,
+  "cls": {
+    "level": 7,
+    "name": "七年级"
+  }
+}
