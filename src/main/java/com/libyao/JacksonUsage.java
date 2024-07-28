@@ -1,9 +1,6 @@
 package com.libyao;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import java.io.File;
-import java.io.IOException;
+import java.nio.charset.Charset;
 
 public class JacksonUsage {
 
@@ -21,23 +18,15 @@ public class JacksonUsage {
         student.cls = cls;
 
         System.out.println(student);
+        System.out.println(Charset.defaultCharset().displayName());
 
-        ObjectMapper mapper = new ObjectMapper();
-
+        // // reuse
+        // ObjectMapper mapper = new ObjectMapper();
         // try {
-        //     BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("stu.json"), StandardCharsets.UTF_8));
-        //     mapper.writeValue(writer, student);
+        //     mapper.writeValue(new File("result.json"), student);
         // } catch (IOException e) {
         //     throw new RuntimeException(e);
         // }
-
-        Student stu2;
-        try {
-            stu2 = mapper.readValue(new File("stu.json"), Student.class);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        System.out.println(stu2);
 
     }
 }

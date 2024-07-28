@@ -11,7 +11,7 @@ repositories {
 
 dependencies {
     implementation("com.fasterxml.jackson.core:jackson-databind:2.16.2")
-    implementation("redis.clients:jedis:5.1.0")
+    // implementation("redis.clients:jedis:5.1.0")
     implementation("org.slf4j:slf4j-nop:2.0.7")
     implementation("org.apache.commons:commons-lang3:3.12.0")
 
@@ -22,5 +22,5 @@ tasks.test {
     useJUnitPlatform()
 }
 kotlin {
-    jvmToolchain(17)
+    jvmToolchain(21)
 }
